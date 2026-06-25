@@ -32,15 +32,7 @@
 
                 <!-- IMAGE -->
                 <div class="product-image">
-<!-- WISHLIST -->
-<form action="{{ route('wishlist.store', $product->id) }}" method="POST"
-      style="position:absolute; top:10px; left:10px; z-index:10;">
-    @csrf
-    <button type="submit"
-        style="background:red; color:white; border:none; padding:10px; border-radius:10px;">
-        ❤️
-    </button>
-</form>
+
                     @if($product->thumbnail)
                         <img src="{{ asset('storage/'.$product->thumbnail) }}"
                              alt="{{ $product->name }}">
